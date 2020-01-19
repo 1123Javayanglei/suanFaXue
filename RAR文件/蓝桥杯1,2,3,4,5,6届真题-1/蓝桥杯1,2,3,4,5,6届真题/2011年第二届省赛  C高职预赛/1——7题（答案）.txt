@@ -1,0 +1,8 @@
+1.	money*1.03或者money*0.03+money
+2.	2/a
+3.
+4.	x.month-1
+5.
+6.	h(space+1,x-1)和x-i
+7.	sa[i+j]和n=j
+

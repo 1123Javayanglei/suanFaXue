@@ -1,0 +1,16 @@
+/*
+
+Ë¼Â·£º
+count=0;
+while(count<100003)
+{
+	i=1;
+	if(is_prime(i))
+	{
+		count++;
+	}
+	i++;	
+}
+printf("%d\n",i-1);
+
+*/

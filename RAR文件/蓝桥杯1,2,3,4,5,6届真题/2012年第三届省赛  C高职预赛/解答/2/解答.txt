@@ -1,0 +1,66 @@
+ if(i*m==(150-i)*n)
+		 {
+			 x=i;
+			 printf("%d\n",x);
+
+		
+		 }
+
+
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	int i,x;
+	float m,n;
+    for(i=1;i>150;i++)
+	{
+	    x=150-i; 
+		m=32/i;
+         n=24.5/(150-i);
+		 
+		if(i==x)
+			printf("ab");
+		
+	}
+	
+	    
+}
+
+
+
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	int i,x;
+	float m,n;
+    for(i=1;i>150;i++)
+	{
+	    x=150-i; 
+		m=32/i;
+         n=24.5/(150-i);
+		  if(i*m==(150-i)*n)
+		 {
+	
+			 printf("%d\n",x);
+
+		
+		 }
+
+		
+	}
+	
+	    
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+#include <stdio.h>
+int f1(int a,int b)
+{
+    int t,m;
+    int c;
+    if (a < b)                                              
+    {
+        t = a;
+        a = b;
+        b = t;
+    }
+    m = a * b;
+    c = a % b;                                          
+    while (c != 0)                                      
+    {
+        a = b;                                              
+        b = c;                                          
+        c = a % b;                                      
+    }
+    return m/b;
+}
+main()
+{
+    int a,b,c,s;
+    do
+    {
+        scanf("%d%d%d", &a,&b,&c);
+    }                                   
+    while(a>30&&b>30&&c>30);                                    
+    s=f1(a,b);
+    s=f1(s,c);
+    printf("%d\n",s);
+}

@@ -1,0 +1,72 @@
+1.求年龄
+ 代码:
+	#include <stdio.h>
+#include <math.h>
+int judge(int a,int b)
+{
+
+	int A[10]= {0};
+	int B[10]= {0};
+
+	int i;
+
+	while(a>0){
+		A[a%10]++;
+		a/=10;
+	}
+	while(b>0){
+		B[b%10]++;
+		b/=10;
+
+	}
+	for(i=0; i<10; i++)
+	{
+		if(A[i]+B[i]>=1 && A[i]+B[i]<2 )
+			return 0;
+	}
+	return 1;
+}
+int main(){
+	for (int i=17; i<20; i++) {
+		int three=i*i*i; // 1234
+		int five=i*i*i*i;   // 123456
+		judge(three,five);
+		if (judge(three, five)==0 && three/1000!=0 && five/100000!=0 ) {
+			printf("年龄:%d\n",i);
+			printf("%d %d\n",three,five);
+			break;
+		}
+	}
+	return 0;
+}
+
+	结果: 18
+
+
+2.马虎算式
+
+ 代码:
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+
+	int cnt=0;
+	for(int a=1;a<10;a++)
+		for(int b=1;b<10;b++)
+			for(int c=1;c<10;c++)
+				for(int d=1;d<10;d++)
+					for(int e=1;e<10;e++)
+						if( ((a*10+b)*(c*100+d*10+e)==(a*100+d*10+b)*(c*10+e)) && a!=b&&a!=c&&a!=d&&a!=e&& b!=c&&b!=d&&b!=e && c!=d&&c!=e )
+							cnt++;
+	printf("%d\n",cnt);
+	return 0;
+}
+
+	结果：149
+
+
+
+
+
+

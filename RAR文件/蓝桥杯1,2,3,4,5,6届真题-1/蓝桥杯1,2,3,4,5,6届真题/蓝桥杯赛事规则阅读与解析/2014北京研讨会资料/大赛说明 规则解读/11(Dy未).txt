@@ -1,0 +1,56 @@
+/*
+A B C D中取5次，每个字母都可以重复取出，形成一个串。
+现在要求，串中A出现的次数必须为偶数（0次也算偶数）。
+求可以形成多少种可能的串。
+*/
+#include<stdio.h>
+main()
+{
+	int A,B,C,D;
+	int num=0;
+	for(A=0;A<5;A+=2)
+	for(B=0;B<=5;B++)
+	for(C=0;C<=5;C++)
+	for(D=0;D<=5;D++)
+	{
+		if(A+B+C+D==5)
+		{
+			num++;
+			printf("%d %d %d %d\n",A,B,C,D);
+		}
+		if(A+B+C+D==4)
+		{
+			num++;
+			printf("%d %d %d %d\n",A,B,C,D);
+		}
+		if(A+B+C+D==3)
+		{
+			num++;
+			printf("%d %d %d %d\n",A,B,C,D);
+		}
+		if(A+B+C+D==2)
+		{
+			num++;
+			printf("%d %d %d %d\n",A,B,C,D);
+		}
+		if(A+B+C+D==1)
+		{
+			num++;
+			printf("%d %d %d %d\n",A,B,C,D);
+		}
+	}
+	printf("%d\n",num);
+	return 0;
+}
+/*
+再利用排列组合，将ABCD的值传到自定义函数（先清除值为零的字母，然后得出有几个字母，每个字母有几个，
+利用排列组合得到有多少种排列方法）
+取一次					（4种） 
+取两次					（） 
+1个字母 取5次			（4种）
+2个字母 各取一次 		（） 
+
+
+
+
+*/ 

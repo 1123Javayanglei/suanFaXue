@@ -1,0 +1,112 @@
+/*
+ 每位选手需要回答10个问题（其编号为1到10），越后面越有难度。答对的，当前分数翻倍；答错了则扣掉与题号相同的分数（选手必须回答问题，不回答按错误处理）。
+    每位选手都有一个起步的分数为10分。
+    某获胜选手最终得分刚好是100分，如果不让你看比赛过程，你能推断出他（她）哪个题目答对了，哪个题目答错了吗？
+    如果把答对的记为1，答错的记为0，则10个题目的回答情况可以用仅含有1和0的串来表示。例如：0010110011 就是可能的情况。 
+    你的任务是算出所有可能情况。每个答案占一行。
+*/
+#include<stdio.h>
+main()
+{
+	int a,b,c,d,e,f,g,h,i,j;
+	int num[10]={0};
+	int st=1;
+	int sco=10;
+	for(j=0;j<2;j++)
+	for(i=0;i<2;i++)
+	for(h=0;h<2;h++)
+	for(g=0;g<2;g++)
+	for(f=0;f<2;f++)
+	for(e=0;e<2;e++)
+	for(d=0;d<2;d++)
+	for(c=0;c<2;c++)
+	for(b=0;b<2;b++)
+	for(a=0;a<2;a++)
+	{
+		if(st==1)
+		{
+			if(a==1)
+			sco*=2;
+			else
+			sco-=1;
+			st++;
+		}
+		if(st==2)
+		{
+			if(b==1)
+			sco*=2;
+			else
+			sco-=2;
+			st++;
+		}
+		if(st==3)
+		{
+			if(c==1)
+			sco*=2;
+			else
+			sco-=3;
+			st++;
+		}
+		if(st==4)
+		{
+			if(d==1)
+			sco*=2;
+			else
+			sco-=4;
+			st++;
+		}
+		if(st==5)
+		{
+			if(e==1)
+			sco*=2;
+			else
+			sco-=5;
+			st++;
+		}
+		if(st==6)
+		{
+			if(f==1)
+			sco*=2;
+			else
+			sco-=6;
+			st++;
+		}
+		if(st==7)
+		{
+			if(g==1)
+			sco*=2;
+			else
+			sco-=7;
+			st++;
+		}
+		if(st==8)
+		{
+			if(h==1)
+			sco*=2;
+			else
+			sco-=8;
+			st++;
+		}
+		if(st==9)
+		{
+			if(i==1)
+			sco*=2;
+			else
+			sco-=9;
+			st++;
+		}
+		if(st==10)
+		{
+			if(j==1)
+			sco*=2;
+			else
+			sco-=10;
+			if(sco==100)
+			printf("%d%d%d%d%d%d%d%d%d%d\n",a,b,c,d,e,f,g,h,i,j);
+			sco=10;
+			st=1;
+		}
+//		printf("%所有可能：%d%d%d%d%d%d%d%d%d%d\n",a,b,c,d,e,f,g,h,i,j);
+	}
+	return 0;
+} 
